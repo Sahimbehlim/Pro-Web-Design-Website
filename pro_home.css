@@ -1,0 +1,132 @@
+@import "all.css";
+body{
+	padding: 0;margin: 0; box-sizing: border-box;
+	font-family: arial;
+}
+section{
+	display: grid;
+	grid-template-rows: 100px 450px 100px 300px 100px;
+	grid-template-columns: 1fr;
+	grid-template-areas: "header" "main" "newsletter" "products" "footer";
+}
+#header,#newsletter{
+	background-color:#424F46;
+}
+:is(#header,#main,#newsletter,#footer) h1,h2,a,p,button{
+	color: white;
+}
+:is(#header,#newsletter) h1,h2{
+	padding-top: 15px;
+	padding-left: 150px;
+}
+#header{
+	grid-area: header;
+	border-bottom: 4px solid #E34813;
+}
+#header h1::before{
+	content: "Pro ";
+	color:#E34813;
+}
+#header ul{
+	list-style: none;
+	margin-left: 950px;
+	margin-top: -60px;
+}
+#header li{
+	display: inline-block;
+	padding: 20px;
+}
+#header a{
+	text-decoration: none;
+}
+#header a:hover{
+	color:#E34813;
+	font-weight: bold;
+}
+#main{
+	grid-area: main;
+	background-image: url(lap_home.jpg);
+	background-size: cover;
+}
+#main h1,p{
+	text-align: center;
+}
+#main h1{
+	font-size: 60px;
+	padding-top: 100px;
+}
+#main p{
+	max-width: 70%;
+	line-height: 1.5;
+	padding-left: 15%;
+	margin-top: -20px;
+}
+#newsletter{
+	grid-area: newsletter;
+}
+#newsletter input,button{
+	float: left;
+	height: 35px;
+	margin-top: -50px;
+}
+#newsletter input{
+	margin-left: 60%;
+	width: 250px;
+}
+#newsletter button{
+	width: 100px;
+	margin-left: 76.7%;
+	border: none;
+}
+#newsletter button:hover{
+	background-color: ghostwhite;
+	color: #E34813;
+	font-weight: bold;
+}
+#footer,button{
+	background-color:#E34813;
+}
+#products{
+	grid-area: products;
+}
+#products h1{
+	text-align: center;
+	font-size: 100px;
+	margin-top: 14px;
+}
+:is(.product1,.product2,.product3){
+	width: 250px;
+	aspect-ratio: 1;
+}
+:is(.product1,.product2,.product3) h3{
+	text-align: center;
+	margin-top: -50;
+}
+:is(.product1,.product2,.product3) p{
+	color: #5D6D7E;
+	line-height: 1.5;
+}
+.product1{
+	margin-left: 20%;
+}
+.product1 h1{
+	color:#E34813;
+}
+.product2{
+	margin-left: 40%;
+}
+.product2 h1{
+	color:#2965f1;
+}
+.product3{
+	margin-left: 60%;
+}
+.product2,.product3{
+	margin-top: -18.8%;
+}
+#footer{
+	grid-area: footer;
+	text-align: center;
+	padding-top: 25px;
+	font-weight: bold;
+}
